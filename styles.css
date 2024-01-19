@@ -1,0 +1,118 @@
+@font-face {
+    font-family:"CaslonOS"
+        src:url("fonts/CaslonOS-Regular.otf")
+        format("otf"),
+            url("fonts/CaslonOS-Regular.otf")
+            format("otf");
+        font-weight: normal;
+        font-style: normal;
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    background-color: red; /* Set the cursor color to red */
+    mix-blend-mode: difference; /* Apply the blending mode */
+    border-radius: 50%; /* Create a circular cursor */
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%); /* Center the cursor on the mouse pointer */
+}
+
+#homevideo {
+    height: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+#homevideo:hover {
+    cursor: url("assets/cursor%20click.png"), auto;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    cursor: none;
+}
+
+#home {
+    height: 100vh;
+}
+
+#talks  {
+    /**font-style: italic;*/
+    font-size: 23px;
+    color: transparent;
+    background: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+    animation: appear 4s;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0.0;
+    } to {
+        opacity: 1.0;
+    }
+}
+
+#title {
+    text-align: center;
+    font-size: 30px;
+}
+
+#title:hover {
+    cursor: url("assets/cursor%20excerpt.png"), auto;
+}
+
+body {
+    font-family: "CaslonOS";
+    /**cursor: url("assets/cursor\ circle.png"), auto;*/
+    cursor: none;
+}
+
+#k_title {
+    animation: slideRight 4s reverse ease-in-out;
+    color: transparent;
+    background: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+}
+
+#rick_title {
+    animation: slideLeft 4s reverse;
+    color: transparent;
+    background: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+}
+
+@keyframes slideLeft {
+    from {
+        margin-left 30%;
+    } to {
+        margin-right: 80%;
+    } 
+}
+
+@keyframes slideRight {
+    from {
+        margin-right 30%;
+    } to {
+        margin-left: 80%;
+    } 
+}
